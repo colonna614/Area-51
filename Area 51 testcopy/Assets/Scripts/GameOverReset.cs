@@ -26,11 +26,12 @@ public class GameOverReset : MonoBehaviour
                 EnemyRandomSpawn.enemySpawnInit = 10;
                 EnemyBehavior.killcount = 0;
                 TheShop.currency = 0;
-            Scoring.score = 0;
-            Time.timeScale = 1;
-            MoveAndShootMouse.purchasedShotgun = false;
-            MoveAndShootMouse.pistolState = true;
-            MoveAndShootMouse.isShotgunState = false;
+                Scoring.score = 0;
+                Time.timeScale = 1;
+                MoveAndShootMouse.purchasedShotgun = false;
+                MoveAndShootMouse.pistolState = true;
+                MoveAndShootMouse.isShotgunState = false;
+                EnemyBehavior.moveSpeed = 2f;
         }
 
     }

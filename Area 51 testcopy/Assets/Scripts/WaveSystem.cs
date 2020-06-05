@@ -23,6 +23,7 @@ public class WaveSystem : MonoBehaviour
             waveNum += 1;
             Time.timeScale = 0;
             inventoryMenu.canOpenInv = false;
+            EnemyBehavior.moveSpeed += 0.2f;
         }
     }
 }

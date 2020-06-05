@@ -10,7 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject Enemy;
     public GameObject Player;
     private Rigidbody2D rb;
-    public float moveSpeed = 1f;
+    public static float moveSpeed = 2f;
 
     public static int killcount = 0;
 
@@ -24,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log("move speed = " + moveSpeed);
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
