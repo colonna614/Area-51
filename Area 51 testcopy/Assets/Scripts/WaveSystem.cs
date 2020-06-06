@@ -15,15 +15,22 @@ public class WaveSystem : MonoBehaviour
     void Update()
     {
         Waves.text = "Wave: " + waveNum.ToString();
-        if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit)
+        if (waveNum == 2)
         {
-            theShop.SetActive(true);
-            EnemyRandomSpawn.enemySpawnInit += 3;
-            EnemyBehavior.killcount = 0;
-            waveNum += 1;
-            Time.timeScale = 0;
-            inventoryMenu.canOpenInv = false;
-            EnemyBehavior.moveSpeed += 0.2f;
+            Debug.Log("stopped");
+        }
+        else
+        {
+            if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit)
+            {
+                theShop.SetActive(true);
+                EnemyRandomSpawn.enemySpawnInit += 3;
+                EnemyBehavior.killcount = 0;
+                waveNum += 1;
+                Time.timeScale = 0;
+                inventoryMenu.canOpenInv = false;
+                EnemyBehavior.moveSpeed += 0.2f;
+            }
         }
     }
 }
