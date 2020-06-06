@@ -12,7 +12,9 @@ public class EnemyRandomSpawn : MonoBehaviour
     public static int enemySpawnInit = 10;
     public int enemySpawnCounter = 10;
     public GameObject theShopOBJ;
-    // Start is called before the first frame update
+
+    public GameObject theBoss1;
+    public Animator bossIndicator;
     void Start()
     {
         spawnAllowed = true;
@@ -32,12 +34,20 @@ public class EnemyRandomSpawn : MonoBehaviour
          {
             if (theShopOBJ.activeSelf == true)
             {
-                enemySpawnCounter = enemySpawnInit;
                 theShopOBJ.SetActive(false);
                 MoveAndShootMouse.canShoot = true;
                 Move2D.OutOfShop = true;
                 Time.timeScale = 1;
                 inventoryMenu.canOpenInv = true;
+                if (WaveSystem.waveNum == 3)
+                {
+                    theBoss1.SetActive(true);
+                    bossIndicator.enabled = true ;
+                }
+                else
+                {
+                    enemySpawnCounter = enemySpawnInit;
+                }
             }
       
          }

@@ -32,6 +32,8 @@ public class GameOverReset : MonoBehaviour
                 MoveAndShootMouse.pistolState = true;
                 MoveAndShootMouse.isShotgunState = false;
                 EnemyBehavior.moveSpeed = 2f;
+            WaveSystem.waveNum = 1;
+            Boss1Behavior.bossHealth = 200;
         }
 
     }

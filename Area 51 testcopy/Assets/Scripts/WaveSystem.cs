@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WaveSystem : MonoBehaviour
 {
     Text Waves;
-    public int waveNum = 1;
+    public static int waveNum = 1;
     public GameObject theShop;
     void Start()
     {
@@ -15,22 +15,18 @@ public class WaveSystem : MonoBehaviour
     void Update()
     {
         Waves.text = "Wave: " + waveNum.ToString();
-        if (waveNum == 2)
-        {
-            Debug.Log("stopped");
-        }
-        else
-        {
-            if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit)
+       
+            if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit || Boss1Behavior.boss1IsDead == true)
             {
                 theShop.SetActive(true);
                 EnemyRandomSpawn.enemySpawnInit += 3;
                 EnemyBehavior.killcount = 0;
                 waveNum += 1;
                 Time.timeScale = 0;
-                inventoryMenu.canOpenInv = false;
+            Boss1Behavior.boss1IsDead = false;
+            inventoryMenu.canOpenInv = false;
                 EnemyBehavior.moveSpeed += 0.2f;
             }
-        }
+        
     }
 }

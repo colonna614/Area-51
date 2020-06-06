@@ -10,14 +10,14 @@ public class Boss1Behavior : MonoBehaviour
     public GameObject Enemy;
     public GameObject Player;
     private Rigidbody2D rb;
-    public static float moveSpeed = 2f;
+    public static float moveSpeed = 5f;
 
     public static int killcount = 0;
 
     private Vector2 movement;
-    bool isDead =false;
+    public static bool boss1IsDead =false;
 
-    public static int bossHealth = 100;
+    public static int bossHealth = 200;
 
     private void Start()
     {
@@ -26,16 +26,18 @@ public class Boss1Behavior : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log("Boss Health = " + bossHealth);
+        //Debug.Log("Boss Health = " + bossHealth);
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
-        if (isDead)
+        if (bossHealth<=0)
         {
-            Die();
-            bossHealth = 100;
+            gameObject.SetActive(false);
+            Scoring.score += 1000;
+            TheShop.currency += 100;
+            boss1IsDead = true;
         }
 
     }
@@ -55,8 +57,6 @@ public class Boss1Behavior : MonoBehaviour
       //  Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
         Scoring.score += 1000;
-        //EnemyCountDisplay.enemies -= 1;
-        //killcount += 1;
         TheShop.currency += 100;
     }
 
@@ -72,11 +72,10 @@ public class Boss1Behavior : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             bossHealth -= 10;
-            if (bossHealth <= 0)
-            {
-                isDead = true;
-            }
-            //isDead = true;
+           // if (bossHealth <= 0)
+            //{
+             //   boss1IsDead = true;
+            //}
         }
         
 
@@ -86,12 +85,10 @@ public class Boss1Behavior : MonoBehaviour
         if (other.gameObject.tag == "Knife")
         {
             bossHealth -= 10;
-            if (bossHealth <= 0)
-            {
-                isDead = true;
-            }
-            //Debug.Log("Knife hit something");
-            //isDead = true;
+           // if (bossHealth <= 0)
+            //{
+             //   boss1IsDead = true;
+            //}
         }
     }
 }
