@@ -34,6 +34,8 @@ public class GameOverReset : MonoBehaviour
                 EnemyBehavior.moveSpeed = 2f;
             WaveSystem.waveNum = 1;
             Boss1Behavior.bossHealth = 200;
+            TimsBehavior.timsHealth = 150;
+            TomsBehavior.tomsHealth = 150;
         }
 
     }

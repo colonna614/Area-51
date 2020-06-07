@@ -15,6 +15,8 @@ public class EnemyRandomSpawn : MonoBehaviour
 
     public GameObject theBoss1;
     public Animator bossIndicator;
+    public Animator bossIndicator2;
+    public GameObject theBoss2;
     void Start()
     {
         spawnAllowed = true;
@@ -42,7 +44,12 @@ public class EnemyRandomSpawn : MonoBehaviour
                 if (WaveSystem.waveNum == 2)
                 {
                     theBoss1.SetActive(true);
-                    bossIndicator.enabled = true ;
+                    bossIndicator.enabled = true;
+                }
+                else if (WaveSystem.waveNum == 10)
+                {
+                    theBoss2.SetActive(true);
+                    bossIndicator2.enabled = true;
                 }
                 else
                 {

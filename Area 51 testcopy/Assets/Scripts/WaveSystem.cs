@@ -8,6 +8,8 @@ public class WaveSystem : MonoBehaviour
     Text Waves;
     public static int waveNum = 1;
     public GameObject theShop;
+    public Animator bossIndicator;
+    public GameObject boss2Contain;
     void Start()
     {
         Waves = GetComponent<Text>();
@@ -16,14 +18,18 @@ public class WaveSystem : MonoBehaviour
     {
         Waves.text = "Wave: " + waveNum.ToString();
        
-            if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit || Boss1Behavior.boss1IsDead == true)
+            if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit || Boss1Behavior.boss1IsDead == true || (TimsBehavior.TimIsDead == true && TomsBehavior.TomIsDead == true))
             {
                 theShop.SetActive(true);
                 EnemyRandomSpawn.enemySpawnInit += 3;
                 EnemyBehavior.killcount = 0;
                 waveNum += 1;
                 Time.timeScale = 0;
+            bossIndicator.enabled = false;
+            boss2Contain.SetActive(false);
             Boss1Behavior.boss1IsDead = false;
+            TimsBehavior.TimIsDead = false;
+            TomsBehavior.TomIsDead = false;
             inventoryMenu.canOpenInv = false;
                 EnemyBehavior.moveSpeed += 0.2f;
             }

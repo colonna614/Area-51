@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Boss2Behavior.cs" />
     <Compile Include="Assets\Scripts\AmmoCount.cs" />
     <Compile Include="Assets\Scripts\Boss1Behavior.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
@@ -99,6 +100,9 @@
     <Compile Include="Assets\Scripts\spawner.cs" />
     <Compile Include="Assets\Scripts\TheShop.cs" />
     <Compile Include="Assets\Scripts\WaveSystem.cs" />
+    <Compile Include="Assets\TimsBehavior.cs" />
+    <Compile Include="Assets\TimTomHealthDisplay.cs" />
+    <Compile Include="Assets\TomsBehavior.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/colon/Desktop/Area 51 Post Graduation/Area 51 Master Copy/Area 51 testcopy/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
