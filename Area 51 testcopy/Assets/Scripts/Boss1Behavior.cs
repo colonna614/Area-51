@@ -35,8 +35,8 @@ public class Boss1Behavior : MonoBehaviour
         if (bossHealth<=0)
         {
             gameObject.SetActive(false);
-            Scoring.score += 1000;
-            TheShop.currency += 100;
+            Scoring.score += 2500;
+            TheShop.currency += 250;
             boss1IsDead = true;
         }
 
@@ -52,13 +52,7 @@ public class Boss1Behavior : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
-    public void Die()
-    {
-      //  Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-        Scoring.score += 1000;
-        TheShop.currency += 100;
-    }
+    
 
     public void OnCollisionEnter2D(Collision2D collision)
     {

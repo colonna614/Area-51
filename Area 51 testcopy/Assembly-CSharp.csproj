@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ScaryLarryHealthDisplay.cs" />
     <Compile Include="Assets\Scripts\AmmoCount.cs" />
     <Compile Include="Assets\Scripts\Boss1Behavior.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
@@ -86,12 +85,14 @@
     <Compile Include="Assets\Scripts\MouseToAim.cs" />
     <Compile Include="Assets\Scripts\Move2D.cs" />
     <Compile Include="Assets\Scripts\MoveAndShootMouse.cs" />
+    <Compile Include="Assets\Scripts\nice.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\pause.cs" />
     <Compile Include="Assets\Scripts\PickUp.cs" />
     <Compile Include="Assets\Scripts\PickUpV2.cs" />
     <Compile Include="Assets\Scripts\platMove.cs" />
     <Compile Include="Assets\Scripts\PlayerSpriteController.cs" />
+    <Compile Include="Assets\Scripts\ScaryLarryHealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Scoring.cs" />
     <Compile Include="Assets\Scripts\ShootingScript.cs" />
     <Compile Include="Assets\Scripts\SoundManagerScript.cs" />

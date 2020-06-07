@@ -36,7 +36,7 @@ public class TheShop : MonoBehaviour
                 AmmoCount.ammo += 15;
                 currency -= 80;
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3) && currency >= 200 && MoveAndShootMouse.purchasedShotgun == false)
+            if (Input.GetKeyDown(KeyCode.Alpha3) && currency >= 600 && MoveAndShootMouse.purchasedShotgun == false)
             {
                 SoundManagerScript.PlaySound("SFX/ChaChing");
                 MoveAndShootMouse.purchasedShotgun = true;
@@ -44,7 +44,7 @@ public class TheShop : MonoBehaviour
                 Number3.enabled = true;
                 ShotSoldOut.enabled = true;
                 AmmoCount.ammo += 15;
-                currency -= 200;
+                currency -= 600;
             }
             if (HealthScript.health >= 100)
             {
