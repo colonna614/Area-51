@@ -41,7 +41,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                 Move2D.OutOfShop = true;
                 Time.timeScale = 1;
                 inventoryMenu.canOpenInv = true;
-                if (WaveSystem.waveNum == 2)
+                if (WaveSystem.waveNum == 5)
                 {
                     theBoss1.SetActive(true);
                     bossIndicator.enabled = true;
