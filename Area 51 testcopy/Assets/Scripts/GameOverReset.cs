@@ -36,6 +36,7 @@ public class GameOverReset : MonoBehaviour
             Boss1Behavior.bossHealth = 200;
             TimsBehavior.timsHealth = 150;
             TomsBehavior.tomsHealth = 150;
+            Boss3Behavior.bossHealth = 300;
         }
 
     }

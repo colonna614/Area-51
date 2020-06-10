@@ -10,13 +10,15 @@ public class Boss3Behavior : MonoBehaviour
     public GameObject Player;
     private Rigidbody2D rb;
     public static float moveSpeed = 5f;
+    public Sprite KifleyWithGuns;
+    public GameObject Boss3Container;
 
     public static int killcount = 0;
 
     private Vector2 movement;
-    public static bool boss1IsDead = false;
+    public static bool boss3IsDead = false;
 
-    public static int bossHealth = 200;
+    public static int bossHealth = 300;
 
     private void Start()
     {
@@ -25,21 +27,18 @@ public class Boss3Behavior : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log("Boss Health = " + bossHealth);
+        //Debug.Log("Boss Health = " + bossHealth);
         Vector3 direction = player.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
-        
 
-        if (bossHealth <= 0)
+        if (bossHealth <= 150)
         {
-            gameObject.SetActive(false);
-            Scoring.score += 2500;
-            TheShop.currency += 250;
-            boss1IsDead = true;
+            this.GetComponent<SpriteRenderer>().sprite = KifleyWithGuns;
         }
+        
 
     }
 
@@ -69,7 +68,7 @@ public class Boss3Behavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Knife")
         {
-            bossHealth -= 10;
+            bossHealth -= 30;
             // if (bossHealth <= 0)
             //{
             //   boss1IsDead = true;

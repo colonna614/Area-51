@@ -18,7 +18,7 @@ public class WaveSystem : MonoBehaviour
     {
         Waves.text = "Wave: " + waveNum.ToString();
        
-            if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit || Boss1Behavior.boss1IsDead == true || (TimsBehavior.TimIsDead == true && TomsBehavior.TomIsDead == true))
+            if (EnemyBehavior.killcount == EnemyRandomSpawn.enemySpawnInit || Boss1Behavior.boss1IsDead == true || (TimsBehavior.TimIsDead == true && TomsBehavior.TomIsDead == true) || Boss3Behavior.boss3IsDead == true)
             {
                 theShop.SetActive(true);
                 EnemyRandomSpawn.enemySpawnInit += 3;
@@ -27,6 +27,7 @@ public class WaveSystem : MonoBehaviour
                 Time.timeScale = 0;
             bossIndicator.enabled = false;
             boss2Contain.SetActive(false);
+            Boss3Behavior.boss3IsDead = false;
             Boss1Behavior.boss1IsDead = false;
             TimsBehavior.TimIsDead = false;
             TomsBehavior.TomIsDead = false;

@@ -41,17 +41,10 @@ public class TimTomHealthDisplay : MonoBehaviour
             Obstacles.SetActive(false);
             NEWwaves.enabled = true;
             OGwaves.enabled = false;
-        }
-        if (boss2Contain.activeSelf == true)
-        {
             TomBarDeplete.enabled = true;
             TomBarRemain.enabled = true;
             TomSprite.enabled = true;
-            enemySprite.enabled = false;
-            enemyRemaining.enabled = false;
-            Obstacles.SetActive(false);
-            NEWwaves.enabled = true;
-            OGwaves.enabled = false;
+            
         }
         if (TimsBehavior.timsHealth <= 0 && TomsBehavior.tomsHealth <= 0)
         {
