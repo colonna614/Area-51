@@ -79,6 +79,15 @@ public class Move2D : MonoBehaviour
         State1();
         //State2();
         //waitForMousePress();
+
+        if (HealthScript.health <= 0)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            GameOver.SetActive(true);
+            StatsBar.SetActive(false);
+            Time.timeScale = 0;
+            MainCharacter.SetActive(false);
+        }
     }
 
 
@@ -233,15 +242,6 @@ public class Move2D : MonoBehaviour
             SoundManagerScript.PlaySound("SFX/GetHit");
             //Debug.Log("OUCH!");
             HealthScript.health -= 10f;
-        }
-
-        if (HealthScript.health <= 0)
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            GameOver.SetActive(true);
-            StatsBar.SetActive(false);
-            Time.timeScale = 0;
-            MainCharacter.SetActive(false);
         }
     }
     
