@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.SceneManagement;
+
 
 public class Boss3Behavior : MonoBehaviour
 {
@@ -20,9 +22,18 @@ public class Boss3Behavior : MonoBehaviour
 
     public static int bossHealth = 300;
 
+    public bool kifleyCannonState = false;
+    public bool kifleyBaseState = true;
+
+    private Animator anim;
+
+    public Camera MainCamera;
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
     }
 
     public void Update()
@@ -33,15 +44,23 @@ public class Boss3Behavior : MonoBehaviour
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
-
+        UpdateAnimations();
+        //anim.SetBool("KifleyCannon", kifleyCannonState);
         if (bossHealth <= 150)
         {
-            this.GetComponent<SpriteRenderer>().sprite = KifleyWithGuns;
+            kifleyBaseState = false;
+            kifleyCannonState = true;
+            //this.GetComponent<SpriteRenderer>().sprite = KifleyWithGuns;
         }
         
 
     }
 
+    private void UpdateAnimations()
+    {
+        anim.SetBool("KifleyBase", kifleyBaseState);
+        anim.SetBool("KifleyCannons", kifleyCannonState);
+    }
     
 
     public void OnCollisionEnter2D(Collision2D collision)

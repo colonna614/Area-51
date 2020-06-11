@@ -26553,6 +26553,7 @@ MonoBehaviour:
   theBoss2: {fileID: 557516233}
   bossIndicator3: {fileID: 1064259429}
   theBoss3: {fileID: 1402182842}
+  mainCamera: {fileID: 1529725538}
 --- !u!4 &1620676032
 Transform:
   m_ObjectHideFlags: 0
@@ -28090,9 +28091,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867655823}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1a5f69518be12354e9bfe159e43b07c1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 03a53deccd56fa046b6730984fdc01f0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -28125,6 +28126,9 @@ MonoBehaviour:
   Player: {fileID: 1900068989}
   KifleyWithGuns: {fileID: 21300000, guid: 76b7a508102a2d14fb08eae4108b359b, type: 3}
   Boss3Container: {fileID: 1402182842}
+  kifleyCannonState: 0
+  kifleyBaseState: 1
+  MainCamera: {fileID: 0}
 --- !u!114 &1867655832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28137,6 +28141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3479ad2fbc5ff54d919b919f0559b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1529725538}
   bulletsAmount: 4
   startAngle: 0
   endAngle: 180

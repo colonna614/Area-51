@@ -20,6 +20,8 @@ public class EnemyRandomSpawn : MonoBehaviour
     public Animator bossIndicator3;
     public GameObject theBoss3;
 
+    public Camera mainCamera;
+
     void Start()
     {
         spawnAllowed = true;
@@ -56,6 +58,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                 }
                 else if (WaveSystem.waveNum == 15)
                 {
+                    mainCamera.orthographicSize = 4.2f;
                     theBoss3.SetActive(true);
                     bossIndicator3.enabled = true;
                 }

@@ -15,6 +15,8 @@ public class ScaryLarryHealthDisplay : MonoBehaviour
     public GameObject Larry;
     public GameObject Obstacles;
 
+    public bool reset = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,7 @@ public class ScaryLarryHealthDisplay : MonoBehaviour
             enemyRemaining.enabled = false;
             Obstacles.SetActive(false);
         }
-        if (Boss1Behavior.bossHealth <= 0)
+        if (Boss1Behavior.bossHealth <= 0 && reset == false)
         {
             larryBarDeplete.enabled = false;
             larryBarRemain.enabled = false;
@@ -43,6 +45,7 @@ public class ScaryLarryHealthDisplay : MonoBehaviour
             enemySprite.enabled = true;
             enemyRemaining.enabled = true;
             Obstacles.SetActive(true);
+            reset = true;
 
         }
     }

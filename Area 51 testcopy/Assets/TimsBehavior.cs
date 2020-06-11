@@ -29,7 +29,7 @@ public class TimsBehavior : MonoBehaviour
     public void Update()
     {
         //Debug.Log("Boss Health = " + bossHealth);
-        Debug.Log("Tims Health: = " + timsHealth);
+        //Debug.Log("Tims Health: = " + timsHealth);
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;

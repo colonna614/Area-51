@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBulletHell : MonoBehaviour
 {
+    public Camera mainCamera;
+
     [SerializeField]
     private int bulletsAmount = 10;
 
@@ -55,9 +57,11 @@ public class EnemyBulletHell : MonoBehaviour
         if (Boss3Behavior.bossHealth > 0)
         {
             numHandlingPatterns++;
+            
         }
         if (Boss3Behavior.bossHealth <= 0)
         {
+            mainCamera.orthographicSize = 3.2f;
             CancelInvoke();
             canShoot = false;
             numHandlingPatterns = -1;
