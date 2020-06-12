@@ -21,6 +21,7 @@ public class EnemyRandomSpawn : MonoBehaviour
     public GameObject theBoss3;
 
     public Camera mainCamera;
+    //public static float spawnRate = 1f;
 
     void Start()
     {
@@ -29,6 +30,8 @@ public class EnemyRandomSpawn : MonoBehaviour
     }
     void Update()
     {
+        //Debug.Log("spawnRate : " + spawnRate);
+        
         if (enemySpawnCounter <= 0)
         {
             spawnAllowed = false;
@@ -50,17 +53,23 @@ public class EnemyRandomSpawn : MonoBehaviour
                 {
                     theBoss1.SetActive(true);
                     bossIndicator.enabled = true;
+                    CancelInvoke();
+                    InvokeRepeating("SpawnAEnemy", 0f, .8f);
                 }
                 else if (WaveSystem.waveNum == 10)
                 {
                     theBoss2.SetActive(true);
                     bossIndicator2.enabled = true;
+                    CancelInvoke();
+                    InvokeRepeating("SpawnAEnemy", 0f, .6f);
                 }
                 else if (WaveSystem.waveNum == 15)
                 {
                     mainCamera.orthographicSize = 4.2f;
                     theBoss3.SetActive(true);
                     bossIndicator3.enabled = true;
+                    CancelInvoke();
+                    InvokeRepeating("SpawnAEnemy", 0f, .5f);
                 }
                 else
                 {

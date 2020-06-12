@@ -54,6 +54,9 @@ public class Move2D : MonoBehaviour
     public GameObject KnifeBox;
     int knifetimer = 0;
 
+
+    public bool canKnife = true;
+    public static int canKnifeTime =250;
     // Start is called before the first frame update
     void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -62,6 +65,8 @@ public class Move2D : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+
+        //Debug.Log("Can knife time: " + canKnifeTime);
 
       bulletPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
       lookAngle = Mathf.Atan2(bulletPos.y, bulletPos.x) * Mathf.Rad2Deg;
@@ -79,7 +84,8 @@ public class Move2D : MonoBehaviour
         State1();
         //State2();
         //waitForMousePress();
-
+        Debug.Log("Can knife time: " + canKnifeTime);
+        Debug.Log("CanKnife: " + canKnife);
         if (HealthScript.health <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -147,14 +153,20 @@ public class Move2D : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
             {
-                SoundManagerScript.PlaySound("SFX/Knife");
-                isKnifeSwing = true;
-                KnifeBox.SetActive(true);
+                if (canKnife == true)
+                {
+                    SoundManagerScript.PlaySound("SFX/Knife");
+                    isKnifeSwing = true;
+                    KnifeBox.SetActive(true);
+                    canKnifeTime = 0;
+                    canKnife = false;
+                }
             }
             else
             {
                 isKnifeSwing = false;
             }
+            
         }
         if (KnifeBox.activeSelf ==true)
         {
@@ -165,6 +177,15 @@ public class Move2D : MonoBehaviour
             KnifeBox.SetActive(false);
             knifetimer = 0;
         }
+        if (canKnife == false)
+        {
+            canKnifeTime++;
+        }
+        if (canKnifeTime >= 250)
+        {
+            canKnife = true;
+        }
+
         //Debug.Log(knifetimer + "knife timer");
     }
     /*

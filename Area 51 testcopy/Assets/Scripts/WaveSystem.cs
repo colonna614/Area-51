@@ -33,6 +33,7 @@ public class WaveSystem : MonoBehaviour
             TomsBehavior.TomIsDead = false;
             inventoryMenu.canOpenInv = false;
                 EnemyBehavior.moveSpeed += 0.2f;
+            //EnemyRandomSpawn.spawnRate -= .1f;
             }
         
     }

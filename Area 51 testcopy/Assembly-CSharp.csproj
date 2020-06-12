@@ -69,6 +69,7 @@
     <Compile Include="Assets\EnemyBulletHell.cs" />
     <Compile Include="Assets\KifleyChangeSpriteUI.cs" />
     <Compile Include="Assets\KifleyDisplay.cs" />
+    <Compile Include="Assets\knifeBarUI.cs" />
     <Compile Include="Assets\Scripts\AmmoCount.cs" />
     <Compile Include="Assets\Scripts\Boss1Behavior.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
