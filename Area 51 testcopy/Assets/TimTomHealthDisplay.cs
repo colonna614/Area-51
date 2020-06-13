@@ -25,7 +25,8 @@ public class TimTomHealthDisplay : MonoBehaviour
     public GameObject Tom;
 
     public GameObject boss2Contain;
-    
+
+    public bool reset = false;
     void Update()
     {
         TimhealthBar.fillAmount = TimsBehavior.timsHealth / maxHealth;
@@ -46,7 +47,7 @@ public class TimTomHealthDisplay : MonoBehaviour
             TomSprite.enabled = true;
             
         }
-        if (TimsBehavior.timsHealth <= 0 && TomsBehavior.tomsHealth <= 0)
+        if (TimsBehavior.timsHealth <= 0 && TomsBehavior.tomsHealth <= 0 && reset == false )
         {
             TimBarDeplete.enabled = false;
             TimBarRemain.enabled = false;
@@ -59,7 +60,7 @@ public class TimTomHealthDisplay : MonoBehaviour
             Obstacles.SetActive(true);
             NEWwaves.enabled = false;
             OGwaves.enabled = true;
-            
+            reset = true;
 
         }
     }

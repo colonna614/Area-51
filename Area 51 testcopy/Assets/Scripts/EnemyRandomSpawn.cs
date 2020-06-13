@@ -19,6 +19,8 @@ public class EnemyRandomSpawn : MonoBehaviour
     public GameObject theBoss2;
     public Animator bossIndicator3;
     public GameObject theBoss3;
+    public Animator bossIndicator4;
+    public GameObject theBoss4;
 
     public Camera mainCamera;
     //public static float spawnRate = 1f;
@@ -49,27 +51,35 @@ public class EnemyRandomSpawn : MonoBehaviour
                 Move2D.OutOfShop = true;
                 Time.timeScale = 1;
                 inventoryMenu.canOpenInv = true;
-                if (WaveSystem.waveNum == 5)
+                if (WaveSystem.waveNum == 2)
                 {
                     theBoss1.SetActive(true);
                     bossIndicator.enabled = true;
                     CancelInvoke();
                     InvokeRepeating("SpawnAEnemy", 0f, .8f);
                 }
-                else if (WaveSystem.waveNum == 10)
+                else if (WaveSystem.waveNum == 4)
                 {
                     theBoss2.SetActive(true);
                     bossIndicator2.enabled = true;
                     CancelInvoke();
-                    InvokeRepeating("SpawnAEnemy", 0f, .6f);
+                    InvokeRepeating("SpawnAEnemy", 0f, .65f);
                 }
-                else if (WaveSystem.waveNum == 15)
+                else if (WaveSystem.waveNum == 6)
                 {
                     mainCamera.orthographicSize = 4.2f;
                     theBoss3.SetActive(true);
                     bossIndicator3.enabled = true;
                     CancelInvoke();
                     InvokeRepeating("SpawnAEnemy", 0f, .5f);
+                }
+                else if (WaveSystem.waveNum == 8)
+                {
+                    mainCamera.orthographicSize = 4.2f;
+                    theBoss4.SetActive(true);
+                    bossIndicator4.enabled = true;
+                    CancelInvoke();
+                    InvokeRepeating("SpawnAEnemy", 0f, .45f);
                 }
                 else
                 {

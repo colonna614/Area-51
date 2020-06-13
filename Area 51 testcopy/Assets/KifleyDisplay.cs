@@ -16,7 +16,7 @@ public class KifleyDisplay : MonoBehaviour
     public GameObject Kifley;
     public GameObject Obstacles;
     public GameObject Boss3Contain;
-    
+    public bool reset = false;
 
 // Start is called before the first frame update
 void Start()
@@ -43,7 +43,7 @@ void Start()
             KifleyAngrySprite.enabled = true;
             KifleySprite.enabled = false;
         }
-        if (Boss3Behavior.bossHealth <= 0)
+        if (Boss3Behavior.bossHealth <= 0 && reset == false)
         {
             KifleyAngrySprite.enabled = false;
             KifleyBarDeplete.enabled = false;
@@ -52,7 +52,7 @@ void Start()
             enemySprite.enabled = true;
             enemyRemaining.enabled = true;
             Obstacles.SetActive(true);
-
+            reset = true;
         }
     }
 }

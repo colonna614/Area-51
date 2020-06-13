@@ -84,8 +84,8 @@ public class Move2D : MonoBehaviour
         State1();
         //State2();
         //waitForMousePress();
-        Debug.Log("Can knife time: " + canKnifeTime);
-        Debug.Log("CanKnife: " + canKnife);
+        //Debug.Log("Can knife time: " + canKnifeTime);
+        //Debug.Log("CanKnife: " + canKnife);
         if (HealthScript.health <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);

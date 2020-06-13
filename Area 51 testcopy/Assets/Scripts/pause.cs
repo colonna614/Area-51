@@ -24,6 +24,7 @@ public class pause : MonoBehaviour
                 Time.timeScale = 0;
                 isPaused = true;
                 pauseOBJ.SetActive(true);
+                Boss4Behavior.isPaused = true;
             }
             else if (Input.GetKeyDown(KeyCode.P) && isPaused == true)
             {
@@ -31,6 +32,7 @@ public class pause : MonoBehaviour
                 Time.timeScale = 1;
                 isPaused = false;
                 pauseOBJ.SetActive(false);
+                Boss4Behavior.isPaused = false;
             }
         }
 

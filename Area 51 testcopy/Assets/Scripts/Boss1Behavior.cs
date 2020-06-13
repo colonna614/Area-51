@@ -19,6 +19,7 @@ public class Boss1Behavior : MonoBehaviour
 
     public static int bossHealth = 200;
 
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
