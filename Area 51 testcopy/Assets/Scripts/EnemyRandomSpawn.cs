@@ -51,21 +51,21 @@ public class EnemyRandomSpawn : MonoBehaviour
                 Move2D.OutOfShop = true;
                 Time.timeScale = 1;
                 inventoryMenu.canOpenInv = true;
-                if (WaveSystem.waveNum == 2)
+                if (WaveSystem.waveNum == 5)
                 {
                     theBoss1.SetActive(true);
                     bossIndicator.enabled = true;
                     CancelInvoke();
                     InvokeRepeating("SpawnAEnemy", 0f, .8f);
                 }
-                else if (WaveSystem.waveNum == 4)
+                else if (WaveSystem.waveNum == 10)
                 {
                     theBoss2.SetActive(true);
                     bossIndicator2.enabled = true;
                     CancelInvoke();
                     InvokeRepeating("SpawnAEnemy", 0f, .65f);
                 }
-                else if (WaveSystem.waveNum == 6)
+                else if (WaveSystem.waveNum == 15)
                 {
                     mainCamera.orthographicSize = 4.2f;
                     theBoss3.SetActive(true);
@@ -73,7 +73,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                     CancelInvoke();
                     InvokeRepeating("SpawnAEnemy", 0f, .5f);
                 }
-                else if (WaveSystem.waveNum == 8)
+                else if (WaveSystem.waveNum == 2)
                 {
                     mainCamera.orthographicSize = 4.2f;
                     theBoss4.SetActive(true);

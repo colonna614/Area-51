@@ -62,22 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Boss2Behavior.cs" />
-    <Compile Include="Assets\Boss3Behavior.cs" />
-    <Compile Include="Assets\Boss4Behavior.cs" />
-    <Compile Include="Assets\BulletPool.cs" />
-    <Compile Include="Assets\EnemyBullet.cs" />
-    <Compile Include="Assets\EnemyBulletHell.cs" />
-    <Compile Include="Assets\KifleyChangeSpriteUI.cs" />
-    <Compile Include="Assets\KifleyDisplay.cs" />
-    <Compile Include="Assets\knifeBarUI.cs" />
-    <Compile Include="Assets\MarcusDisplay.cs" />
     <Compile Include="Assets\Scripts\AmmoCount.cs" />
     <Compile Include="Assets\Scripts\Boss1Behavior.cs" />
+    <Compile Include="Assets\Scripts\Boss2Behavior.cs" />
+    <Compile Include="Assets\Scripts\Boss3Behavior.cs" />
+    <Compile Include="Assets\Scripts\Boss4Behavior.cs" />
+    <Compile Include="Assets\Scripts\BulletPool.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\Scripts\CurrencyDisplay.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\EnemyBulletHell.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\EnemyCountDisplay.cs" />
     <Compile Include="Assets\Scripts\EnemyRandomSpawn.cs" />
@@ -88,10 +84,15 @@
     <Compile Include="Assets\Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\highscore.cs" />
     <Compile Include="Assets\Scripts\inventoryMenu.cs" />
+    <Compile Include="Assets\Scripts\KifleyChangeSpriteUI.cs" />
+    <Compile Include="Assets\Scripts\KifleyDisplay.cs" />
+    <Compile Include="Assets\Scripts\knifeBarUI.cs" />
     <Compile Include="Assets\Scripts\KnifeScript.cs" />
     <Compile Include="Assets\Scripts\knifestabbingthing.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\marcusBullets.cs" />
+    <Compile Include="Assets\Scripts\MarcusDisplay.cs" />
     <Compile Include="Assets\Scripts\MouseToAim.cs" />
     <Compile Include="Assets\Scripts\Move2D.cs" />
     <Compile Include="Assets\Scripts\MoveAndShootMouse.cs" />
@@ -108,10 +109,10 @@
     <Compile Include="Assets\Scripts\SoundManagerScript.cs" />
     <Compile Include="Assets\Scripts\spawner.cs" />
     <Compile Include="Assets\Scripts\TheShop.cs" />
+    <Compile Include="Assets\Scripts\TimsBehavior.cs" />
+    <Compile Include="Assets\Scripts\TimTomHealthDisplay.cs" />
+    <Compile Include="Assets\Scripts\TomsBehavior.cs" />
     <Compile Include="Assets\Scripts\WaveSystem.cs" />
-    <Compile Include="Assets\TimsBehavior.cs" />
-    <Compile Include="Assets\TimTomHealthDisplay.cs" />
-    <Compile Include="Assets\TomsBehavior.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/colon/Desktop/Area 51 Post Graduation/Area 51 Master Copy/Area 51 testcopy/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
