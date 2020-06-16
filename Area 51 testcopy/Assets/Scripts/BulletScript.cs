@@ -24,11 +24,18 @@ public class BulletScript : MonoBehaviour
             //Scoring.score += 100;
             //col.gameObject.GetComponent<EnemyBehavior>().Die();
         }
-        else if(col.gameObject.tag == "Obstacle")
+        else if (col.gameObject.tag == "Obstacle")
         {
             Destroy(gameObject);
         }
-
+        else if (col.gameObject.tag == "EnemBul")
+        {
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.tag == "Barrier")
+        {
+            Destroy(gameObject);
+        }
     }
 
 

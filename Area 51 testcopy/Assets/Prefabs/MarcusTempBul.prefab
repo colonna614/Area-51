@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4584412333619580272}
   - component: {fileID: 4028034559930640315}
-  - component: {fileID: 2638818476390482998}
   - component: {fileID: 6997218038778495722}
   - component: {fileID: 6751112246632145033}
   - component: {fileID: 8814072165534340480}
   m_Layer: 0
   m_Name: MarcusTempBul
-  m_TagString: Untagged
+  m_TagString: EnemBul
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,18 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2638818476390482998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5231367249613328215}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c98abdb3ac41e438d079b808cd0aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &6997218038778495722
 Rigidbody2D:
   serializedVersion: 4

@@ -58,6 +58,11 @@ public class Boss4Behavior : MonoBehaviour
     public Transform firePoint2;
     public GameObject marcusBullet;
     public float shootSpeed = 2f;
+
+    public float marcusBufferTime = 0f;
+    public bool marcusBufferCheck = false;
+
+    bool startShooting = true;
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -70,12 +75,30 @@ public class Boss4Behavior : MonoBehaviour
 
     public void Update()
     {
-
-        Quaternion rotation = Quaternion.LookRotation
-             (lookAt.transform.position - transform.position, transform.TransformDirection(Vector3.up));
-        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
-      
+        //if (marcusBufferCheck == false)
+        //{
+        //   marcusBufferTime += 1;
+        //}
+        //if (marcusBufferTime >= 100)
+        //{
+        //   marcusBufferCheck = true;
+        //}
+        //if (marcusBufferCheck == true)
+        //{
+        //Quaternion rotation = Quaternion.LookRotation
+        //     (lookAt.transform.position - transform.position, transform.TransformDirection(Vector3.right));
+        //transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+        //}
         //Debug.Log(animTestTimer);
+        //transform.rotation = lookAt.rotation;
+        //Vector3 direction = player.position - transform.position;
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //rb.rotation = angle;
+        //direction.Normalize();
+        //movement = direction;
+        Vector3 direction = player.position - this.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x);
+        this.transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg);
 
         if (isPaused == false && bossHealth >0)
         {
@@ -138,13 +161,21 @@ public class Boss4Behavior : MonoBehaviour
             needsTarget = false;
             searchingX = true;
             searchingY = true;
+            startShooting = true;
+            //InvokeRepeating("ShootBullet", 0f, .8f);
+        }
+        else if (animTestTimer >= 30&& animTestTimer < 600 && startShooting == true)
+        {
+            
+            startShooting = false;
+            idle = true;
+            returning = false;
             InvokeRepeating("ShootBullet", 0f, .8f);
         }
         else if (animTestTimer < 600)
         {
             idle = true;
             returning = false;
-            
         }
         else if (animTestTimer < 650)
         {

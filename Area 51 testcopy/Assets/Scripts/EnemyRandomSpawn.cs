@@ -73,7 +73,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                     CancelInvoke();
                     InvokeRepeating("SpawnAEnemy", 0f, .5f);
                 }
-                else if (WaveSystem.waveNum == 2)
+                else if (WaveSystem.waveNum == 20)
                 {
                     mainCamera.orthographicSize = 4.2f;
                     theBoss4.SetActive(true);

@@ -45,7 +45,17 @@ public class marcusBullets : MonoBehaviour
         {
             SoundManagerScript.PlaySound("SFX/GetHit");
             Destroy(gameObject);
+            HealthScript.health -= 10;
         }
-        
+        if (collision.gameObject.tag == "Barrier")
+        {
+            
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Bullet")
+        {
+
+            Destroy(gameObject);
+        }
     }
 }
