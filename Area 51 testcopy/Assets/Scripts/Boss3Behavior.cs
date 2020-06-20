@@ -74,7 +74,7 @@ public class Boss3Behavior : MonoBehaviour
         }
         if (collision.gameObject.tag == "Bullet")
         {
-            bossHealth -= 10;
+            bossHealth -= 5;
             // if (bossHealth <= 0)
             //{
             //   boss1IsDead = true;
@@ -87,7 +87,7 @@ public class Boss3Behavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Knife")
         {
-            bossHealth -= 30;
+            bossHealth -= 20;
             // if (bossHealth <= 0)
             //{
             //   boss1IsDead = true;

@@ -138,7 +138,7 @@ public class Boss4Behavior : MonoBehaviour
         }
         if (collision.gameObject.tag == "Bullet" && marcusIsUp == true)
         {
-            bossHealth -= 10;
+            bossHealth -= 5;
             
         }
 
