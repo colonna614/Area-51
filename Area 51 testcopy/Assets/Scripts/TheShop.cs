@@ -11,10 +11,14 @@ public class TheShop : MonoBehaviour
     public Text Number3;
     public Image ShotSoldOut;
     public Image healthSoldOut;
+
+    public int initHealthPrice = 60;
+    public static int currentHealthPrice = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealthPrice = initHealthPrice;
     }
 
     // Update is called once per frame
@@ -24,11 +28,12 @@ public class TheShop : MonoBehaviour
         {
             MoveAndShootMouse.canShoot = false;
             Move2D.OutOfShop = false;
-            if (Input.GetKeyDown(KeyCode.H) && currency >= 60 && HealthScript.health < 100)
+            if (Input.GetKeyDown(KeyCode.H) && currency >= currentHealthPrice && HealthScript.health < 100)
             {
                 SoundManagerScript.PlaySound("SFX/ChaChing");
                 HealthScript.health += 10;
-                currency -= 60;
+                currency -= currentHealthPrice;
+                currentHealthPrice += 10;
             }
             if (Input.GetKeyDown(KeyCode.B) && currency >= 80)
             {

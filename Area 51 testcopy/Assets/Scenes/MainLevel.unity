@@ -1579,6 +1579,7 @@ MonoBehaviour:
   Number3: {fileID: 1548060951}
   ShotSoldOut: {fileID: 1361419823}
   healthSoldOut: {fileID: 1157665607}
+  initHealthPrice: 60
 --- !u!114 &192151737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6157,8 +6158,9 @@ GameObject:
   - component: {fileID: 810634719}
   - component: {fileID: 810634721}
   - component: {fileID: 810634720}
+  - component: {fileID: 810634722}
   m_Layer: 5
-  m_Name: AmmoPrice (2)
+  m_Name: HealthPrice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6180,8 +6182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183.05, y: -91.503}
-  m_SizeDelta: {x: 51.37, y: 39.6}
+  m_AnchoredPosition: {x: -204.62, y: -91.503}
+  m_SizeDelta: {x: 77.6, y: 39.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810634720
 MonoBehaviour:
@@ -6210,15 +6212,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '60
-
-'
+  m_Text: 
 --- !u!222 &810634721
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6227,6 +6227,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810634718}
   m_CullTransparentMesh: 0
+--- !u!114 &810634722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810634718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87521c9afb28c41479e861858d929fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823543953
 GameObject:
   m_ObjectHideFlags: 0
