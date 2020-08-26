@@ -11,7 +11,9 @@ public class MoveAndShootMouse : MonoBehaviour
     public static bool pistolState = true;
   public static bool isShotgunState = false;
     public static bool purchasedShotgun = false;
+    public static bool purchasedAR = false;
     public static bool isKnifeState = false;
+    public static bool isARState = false;
 
 
     public GameObject bulletToRight;
@@ -30,7 +32,7 @@ public class MoveAndShootMouse : MonoBehaviour
       if (AmmoCount.ammo > 0 && canShoot ==true){
         bulletPos = transform.position;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
+            if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && isARState == false)
             {
                 if (pistolState == true)
                 {
@@ -48,6 +50,14 @@ public class MoveAndShootMouse : MonoBehaviour
                     ShootBulletSpread();
                     AmmoCount.ammo -= 3;
                 }
+               
+            }
+            else if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) && isARState == true)
+            {
+                SoundManagerScript.PlaySound("SFX/Pistol");
+                
+                ShootBullet();
+                //AmmoCount.ammo -= 1;
             }
         
 
@@ -57,6 +67,7 @@ public class MoveAndShootMouse : MonoBehaviour
             pistolState = true;
             isKnifeState = false;
             isShotgunState = false;
+            isARState = false;
             //Debug.Log("Pistol active" + pistolState);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -64,6 +75,7 @@ public class MoveAndShootMouse : MonoBehaviour
             pistolState = false;
             isKnifeState = true;
             isShotgunState = false;
+            isARState = false;
             //Debug.Log("Knife active" + isKnifeState);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && purchasedShotgun)
@@ -71,7 +83,15 @@ public class MoveAndShootMouse : MonoBehaviour
             pistolState = false;
             isKnifeState = false;
             isShotgunState = true;
+            isARState = false;
             //Debug.Log("shotgun active" + isShotgunState);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4) /*&& purchasedAR*/)
+        {
+            pistolState = false;
+            isKnifeState = false;
+            isShotgunState = false;
+            isARState = true;
         }
 
     }
