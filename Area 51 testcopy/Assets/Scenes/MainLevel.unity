@@ -482,7 +482,7 @@ Transform:
   m_LocalScale: {x: 2.1473053, y: 2.1473053, z: 2.1473053}
   m_Children: []
   m_Father: {fileID: 1900068996}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &38185737
 GameObject:
@@ -6672,6 +6672,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845801939}
   m_CullTransparentMesh: 0
+--- !u!1 &852654304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852654305}
+  m_Layer: 10
+  m_Name: firePointAR1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &852654305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852654304}
+  m_LocalRotation: {x: 0, y: 0, z: 0.043619405, w: 0.9990483}
+  m_LocalPosition: {x: 1.1500003, y: -0.57, z: 8.756851}
+  m_LocalScale: {x: 2.1473053, y: 2.1473053, z: 2.1473053}
+  m_Children: []
+  m_Father: {fileID: 1900068996}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5}
 --- !u!1 &861760109
 GameObject:
   m_ObjectHideFlags: 0
@@ -26106,7 +26136,7 @@ PrefabInstance:
     - target: {fileID: 192821531341003030, guid: 2e2269c6c6d6eef40b3b92a8380f08d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 192821531341003030, guid: 2e2269c6c6d6eef40b3b92a8380f08d9,
         type: 3}
@@ -27262,6 +27292,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548060949}
   m_CullTransparentMesh: 0
+--- !u!1 &1562898612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562898613}
+  m_Layer: 10
+  m_Name: firePointAR2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1562898613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562898612}
+  m_LocalRotation: {x: 0, y: 0, z: -0.043619405, w: 0.9990483}
+  m_LocalPosition: {x: 1.1500003, y: -0.57, z: 8.756851}
+  m_LocalScale: {x: 2.1473053, y: 2.1473053, z: 2.1473053}
+  m_Children: []
+  m_Father: {fileID: 1900068996}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5}
 --- !u!1 &1578863315
 GameObject:
   m_ObjectHideFlags: 0
@@ -29613,6 +29673,8 @@ MonoBehaviour:
   firePoint: {fileID: 24098584}
   firePoint1: {fileID: 1704624054}
   firePoint2: {fileID: 1355295663}
+  firePointAR1: {fileID: 852654305}
+  firePointAR2: {fileID: 1562898613}
   bulletToRight: {fileID: 6071082205857853069, guid: be8fe05c943d2463a909be49b35d6939,
     type: 3}
 --- !u!1 &1909987786 stripped
