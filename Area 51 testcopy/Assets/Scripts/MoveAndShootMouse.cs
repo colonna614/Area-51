@@ -9,6 +9,7 @@ public class MoveAndShootMouse : MonoBehaviour
   public Transform firePoint2;
     public Transform firePointAR1;
     public Transform firePointAR2;
+    public Transform firePointAR3;
 
     public static bool pistolState = true;
   public static bool isShotgunState = false;
@@ -70,6 +71,7 @@ public class MoveAndShootMouse : MonoBehaviour
             isKnifeState = false;
             isShotgunState = false;
             isARState = false;
+            CancelInvoke();
             //Debug.Log("Pistol active" + pistolState);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -78,6 +80,7 @@ public class MoveAndShootMouse : MonoBehaviour
             isKnifeState = true;
             isShotgunState = false;
             isARState = false;
+            CancelInvoke();
             //Debug.Log("Knife active" + isKnifeState);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && purchasedShotgun)
@@ -86,9 +89,10 @@ public class MoveAndShootMouse : MonoBehaviour
             isKnifeState = false;
             isShotgunState = true;
             isARState = false;
+            CancelInvoke();
             //Debug.Log("shotgun active" + isShotgunState);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) /*&& purchasedAR*/)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && purchasedAR)
         {
             pistolState = false;
             isKnifeState = false;
@@ -118,8 +122,8 @@ public class MoveAndShootMouse : MonoBehaviour
         {
             SoundManagerScript.PlaySound("SFX/Pistol");
             AmmoCount.ammo -= 1;
-            GameObject firedBullet = Instantiate(bulletToRight, firePoint.position, firePoint.rotation);
-            firedBullet.GetComponent<Rigidbody2D>().velocity = firePoint.right;
+            GameObject firedBulletAR3 = Instantiate(bulletToRight, firePointAR3.position, firePointAR3.rotation);
+            firedBulletAR3.GetComponent<Rigidbody2D>().velocity = firePointAR3.right;
         }
         else if (randFirePoint < 3)
         {

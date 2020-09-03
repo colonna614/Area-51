@@ -6,6 +6,7 @@ public class ExitGame : MonoBehaviour
 {
     public GameObject youSure;
     public GameObject TheShopOBJ;
+    public GameObject pauseOBJ;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,11 @@ public class ExitGame : MonoBehaviour
         {
             Application.Quit();
         }
-        else if (youSure && Input.GetKeyDown(KeyCode.N) && TheShopOBJ.activeSelf == true)
+        else if (youSure && Input.GetKeyDown(KeyCode.N) && (TheShopOBJ.activeSelf == true || pauseOBJ.activeSelf == true))
         {
             youSure.SetActive(false);
         }
-        else if (youSure && Input.GetKeyDown(KeyCode.N) && TheShopOBJ.activeSelf == false)
+        else if (youSure && Input.GetKeyDown(KeyCode.N) && TheShopOBJ.activeSelf == false && pauseOBJ.activeSelf == false)
         {
             youSure.SetActive(false);
             MoveAndShootMouse.canShoot = true;

@@ -10,6 +10,9 @@ public class TheShop : MonoBehaviour
     public Image ShotgunSprite;
     public Text Number3;
     public Image ShotSoldOut;
+    public Image ARSprite;
+    public Text Number4;
+    public Image ARSoldOut;
     public Image healthSoldOut;
 
     public int initHealthPrice = 60;
@@ -50,6 +53,16 @@ public class TheShop : MonoBehaviour
                 ShotSoldOut.enabled = true;
                 AmmoCount.ammo += 15;
                 currency -= 600;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha4) && currency >= 1200 && MoveAndShootMouse.purchasedAR == false)
+            {
+                SoundManagerScript.PlaySound("SFX/ChaChing");
+                MoveAndShootMouse.purchasedAR = true;
+                ARSprite.enabled = true;
+                Number4.enabled = true;
+                ARSoldOut.enabled = true;
+                AmmoCount.ammo += 30;
+                currency -= 1200;
             }
             if (HealthScript.health >= 100)
             {

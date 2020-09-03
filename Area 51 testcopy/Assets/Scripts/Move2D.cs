@@ -46,6 +46,7 @@ public class Move2D : MonoBehaviour
     public bool isPistolActive =true;
     public bool isKnifeActive =false;
     public bool isKnifeSwing =false;
+    public bool isARActive = false;
     //public bool isGrounded = false;
 
     private Rigidbody2D rb;
@@ -108,6 +109,7 @@ public class Move2D : MonoBehaviour
         // State 3
         anim.SetBool("isShotgunActive", isShotgunActive);
         //anim.SetBool("isShotgunShooting", isShotgunShooting);
+        anim.SetBool("isARActive", isARActive);
     }
 
     //
@@ -133,7 +135,9 @@ public class Move2D : MonoBehaviour
         {
             isPistolActive = true;
             isKnifeActive = false;
-            isShotgunActive = false;   
+            isShotgunActive = false;
+            isARActive = false;
+
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
@@ -141,6 +145,7 @@ public class Move2D : MonoBehaviour
             isKnifeActive = true;
             isShotgunActive = false;
             isKnifeSwing = false;
+            isARActive = false;
 
         }
         if (Input.GetKey(KeyCode.Alpha3) && MoveAndShootMouse.purchasedShotgun)
@@ -148,6 +153,14 @@ public class Move2D : MonoBehaviour
             isPistolActive = false;
             isKnifeActive = false;
             isShotgunActive = true;
+            isARActive = false;
+        }
+        if (Input.GetKey(KeyCode.Alpha4) && MoveAndShootMouse.purchasedAR)
+        {
+            isPistolActive = false;
+            isKnifeActive = false;
+            isShotgunActive = false;
+            isARActive = true;
         }
         if (isKnifeActive && OutOfShop)
         {
@@ -185,8 +198,6 @@ public class Move2D : MonoBehaviour
         {
             canKnife = true;
         }
-
-        //Debug.Log(knifetimer + "knife timer");
     }
     /*
           public void State2(){

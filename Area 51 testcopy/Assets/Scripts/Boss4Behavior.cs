@@ -18,7 +18,7 @@ public class Boss4Behavior : MonoBehaviour
     private Vector2 movement;
     public static bool boss4IsDead = false;
 
-    public static int bossHealth = 400;
+    public static int bossHealth = 350;
 
     public bool idle = true;
     public bool isMoving = false;
@@ -75,6 +75,7 @@ public class Boss4Behavior : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log(marcusIsUp);
         //if (marcusBufferCheck == false)
         //{
         //   marcusBufferTime += 1;
@@ -170,6 +171,7 @@ public class Boss4Behavior : MonoBehaviour
             startShooting = false;
             idle = true;
             returning = false;
+            marcusIsUp = true;
             InvokeRepeating("ShootBullet", 0f, .8f);
         }
         else if (animTestTimer < 600)

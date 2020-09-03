@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MarcusDisplay : MonoBehaviour
 {
     Image healthBar;
-    float maxHealth = 400f;
+    float maxHealth = 350f;
     public Image MarcusSprite;
     public Image MarcusBarDeplete;
     public Image MarcusBarRemain;

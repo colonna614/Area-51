@@ -7,6 +7,7 @@ public class pause : MonoBehaviour
     bool isPaused = false;
     public GameObject pauseOBJ;
     public GameObject theShopOBJ;
+    public GameObject youSureOBJ;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (theShopOBJ.activeSelf == false)
+        if (theShopOBJ.activeSelf == false && youSureOBJ.activeSelf == false)
         {
             if (Input.GetKeyDown(KeyCode.P) && isPaused == false)
             {
