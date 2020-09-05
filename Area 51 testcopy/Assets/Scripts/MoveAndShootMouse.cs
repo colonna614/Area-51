@@ -17,6 +17,7 @@ public class MoveAndShootMouse : MonoBehaviour
     public static bool purchasedAR = false;
     public static bool isKnifeState = false;
     public static bool isARState = false;
+    public static bool purchasedKnife = false;
     public GameObject ShopOBJ;
 
 

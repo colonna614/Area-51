@@ -57,7 +57,10 @@ public class Move2D : MonoBehaviour
 
 
     public bool canKnife = true;
-    public static int canKnifeTime =250;
+    public static int canKnifeTime =280;
+
+    float knifeCheckNum = 280;
+    //float knifeCheckUpNum = 150;
     // Start is called before the first frame update
     void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -194,7 +197,11 @@ public class Move2D : MonoBehaviour
         {
             canKnifeTime++;
         }
-        if (canKnifeTime >= 250)
+        if (MoveAndShootMouse.purchasedKnife == true)
+        {
+            knifeCheckNum = 150;
+        }
+        if (canKnifeTime >= knifeCheckNum)
         {
             canKnife = true;
         }

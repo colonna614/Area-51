@@ -7,7 +7,7 @@ public class knifeBarUI : MonoBehaviour
 {
 
     Image KnifeBar;
-    float maxStamina = 250f;
+    float maxStamina = 280;
     public static float health;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,10 @@ public class knifeBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MoveAndShootMouse.purchasedKnife == true)
+        {
+            maxStamina = 150f;
+        }
         //Debug.Log(health);
         KnifeBar.fillAmount =  Move2D.canKnifeTime/ maxStamina;
     }

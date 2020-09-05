@@ -14,7 +14,8 @@ public class TheShop : MonoBehaviour
     public Text Number4;
     public Image ARSoldOut;
     public Image healthSoldOut;
-
+    public Image KnifeUpSprite;
+    public Image knifeSoldOut;
     public int initHealthPrice = 60;
     public static int currentHealthPrice = 0;
 
@@ -43,6 +44,14 @@ public class TheShop : MonoBehaviour
                 SoundManagerScript.PlaySound("SFX/ChaChing");
                 AmmoCount.ammo += 15;
                 currency -= 80;
+            }
+            if (Input.GetKeyDown(KeyCode.K) && currency >= 400)
+            {
+                SoundManagerScript.PlaySound("SFX/ChaChing");
+                MoveAndShootMouse.purchasedKnife = true;
+                KnifeUpSprite.enabled = true;
+                knifeSoldOut.enabled = true;
+                currency -= 400;
             }
             if (Input.GetKeyDown(KeyCode.Alpha3) && currency >= 600 && MoveAndShootMouse.purchasedShotgun == false)
             {
