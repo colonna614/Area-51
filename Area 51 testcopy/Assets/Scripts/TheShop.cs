@@ -51,18 +51,18 @@ public class TheShop : MonoBehaviour
                 ShotgunSprite.enabled = true;
                 Number3.enabled = true;
                 ShotSoldOut.enabled = true;
-                AmmoCount.ammo += 15;
+                AmmoCount.ammo += 30;
                 currency -= 600;
             }
-            if (Input.GetKeyDown(KeyCode.Alpha4) && currency >= 1200 && MoveAndShootMouse.purchasedAR == false)
+            if (Input.GetKeyDown(KeyCode.Alpha4) && currency >= 1000 && MoveAndShootMouse.purchasedAR == false)
             {
                 SoundManagerScript.PlaySound("SFX/ChaChing");
                 MoveAndShootMouse.purchasedAR = true;
                 ARSprite.enabled = true;
                 Number4.enabled = true;
                 ARSoldOut.enabled = true;
-                AmmoCount.ammo += 30;
-                currency -= 1200;
+                AmmoCount.ammo += 45;
+                currency -= 1000;
             }
             if (HealthScript.health >= 100)
             {

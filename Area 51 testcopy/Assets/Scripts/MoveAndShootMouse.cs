@@ -17,6 +17,7 @@ public class MoveAndShootMouse : MonoBehaviour
     public static bool purchasedAR = false;
     public static bool isKnifeState = false;
     public static bool isARState = false;
+    public GameObject ShopOBJ;
 
 
     public GameObject bulletToRight;
@@ -62,6 +63,10 @@ public class MoveAndShootMouse : MonoBehaviour
             }
         }
         else if (AmmoCount.ammo == 0)
+        {
+            CancelInvoke();
+        }
+        if (ShopOBJ.activeSelf == true)
         {
             CancelInvoke();
         }

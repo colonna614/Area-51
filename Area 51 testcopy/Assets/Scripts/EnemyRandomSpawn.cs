@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyRandomSpawn : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class EnemyRandomSpawn : MonoBehaviour
     public GameObject theBoss4;
 
     public Camera mainCamera;
+
+    public Text thanks;
     //public static float spawnRate = 1f;
 
     void Start()
@@ -84,6 +87,10 @@ public class EnemyRandomSpawn : MonoBehaviour
                 else
                 {
                     enemySpawnCounter = enemySpawnInit;
+                }
+                if (WaveSystem.waveNum == 21)
+                {
+                    thanks.enabled = true;
                 }
             }
       
