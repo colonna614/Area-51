@@ -16,6 +16,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private Vector2 movement;
     bool isDead =false;
+    bool isDeadByKnife = false;
 
     private void Start()
     {
@@ -33,6 +34,10 @@ public class EnemyBehavior : MonoBehaviour
         if (isDead)
         {
             Die();
+        }
+        else if (isDeadByKnife)
+        {
+            DieByKnife();
         }
 
     }
@@ -56,6 +61,15 @@ public class EnemyBehavior : MonoBehaviour
         killcount += 1;
         TheShop.currency += 10;
     }
+    public void DieByKnife()
+    {
+        Destroy(gameObject);
+        Scoring.score += 100;
+        EnemyCountDisplay.enemies -= 1;
+        killcount += 1;
+        TheShop.currency += 10;
+        unlockKnifeUp.numOfKnifeKills += 1;
+    }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -78,7 +92,7 @@ public class EnemyBehavior : MonoBehaviour
         if (other.gameObject.tag == "Knife")
         {
             //Debug.Log("Knife hit something");
-            isDead = true;
+            isDeadByKnife = true;
         }
     }
 }

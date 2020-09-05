@@ -29,17 +29,20 @@ public class GameOverReset : MonoBehaviour
                 Scoring.score = 0;
                 Time.timeScale = 1;
                 MoveAndShootMouse.purchasedShotgun = false;
-            MoveAndShootMouse.purchasedAR = false;
+                MoveAndShootMouse.purchasedAR = false;
                 MoveAndShootMouse.pistolState = true;
                 MoveAndShootMouse.isShotgunState = false;
-            MoveAndShootMouse.isARState = false;
+                MoveAndShootMouse.isARState = false;
+                MoveAndShootMouse.purchasedKnife = false;
+            unlockKnifeUp.knifeUnlocked = false;
+            unlockKnifeUp.numOfKnifeKills = 0;
                 EnemyBehavior.moveSpeed = 2f;
-            WaveSystem.waveNum = 1;
-            Boss1Behavior.bossHealth = 200;
-            TimsBehavior.timsHealth = 150;
-            TomsBehavior.tomsHealth = 150;
-            Boss3Behavior.bossHealth = 300;
-            Boss4Behavior.bossHealth = 350;
+                WaveSystem.waveNum = 1;
+                Boss1Behavior.bossHealth = 200;
+                TimsBehavior.timsHealth = 150;
+                TomsBehavior.tomsHealth = 150;
+                Boss3Behavior.bossHealth = 300;
+                Boss4Behavior.bossHealth = 350;
         }
 
     }

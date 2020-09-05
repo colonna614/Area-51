@@ -45,13 +45,13 @@ public class TheShop : MonoBehaviour
                 AmmoCount.ammo += 15;
                 currency -= 80;
             }
-            if (Input.GetKeyDown(KeyCode.K) && currency >= 400)
+            if (Input.GetKeyDown(KeyCode.K) && currency >= 300 && unlockKnifeUp.knifeUnlocked == true)
             {
                 SoundManagerScript.PlaySound("SFX/ChaChing");
                 MoveAndShootMouse.purchasedKnife = true;
                 KnifeUpSprite.enabled = true;
                 knifeSoldOut.enabled = true;
-                currency -= 400;
+                currency -= 300;
             }
             if (Input.GetKeyDown(KeyCode.Alpha3) && currency >= 600 && MoveAndShootMouse.purchasedShotgun == false)
             {
