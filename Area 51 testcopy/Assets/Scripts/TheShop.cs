@@ -17,11 +17,16 @@ public class TheShop : MonoBehaviour
     public Image KnifeUpSprite;
     public Image knifeSoldOut;
     public Image ammoUpSoldOut;
+    public Image healthUpSoldOut;
     public Image doubleAmmo;
+    public Image doubleHealth;
     public int initHealthPrice = 60;
     public static int currentHealthPrice = 0;
     public int ammoIncrease = 15;
+    public int healthIncrease = 10;
     public bool ammoUpgrade = false;
+    public bool healthUpgrade = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +37,14 @@ public class TheShop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(HealthScript.health);
         if (ammoUpgrade)
         {
             ammoIncrease = 30;
+        }
+        if (healthUpgrade)
+        {
+            healthIncrease = 20;
         }
         if (theShopOBJ.activeSelf == true)
         {
@@ -43,9 +53,10 @@ public class TheShop : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.H) && currency >= currentHealthPrice && HealthScript.health < 100)
             {
                 SoundManagerScript.PlaySound("SFX/ChaChing");
-                HealthScript.health += 10;
+                HealthScript.health += healthIncrease;
                 currency -= currentHealthPrice;
                 currentHealthPrice += 10;
+                UnlockHealthUp.numOfHealthBought += 1;
             }
             if (Input.GetKeyDown(KeyCode.B) && currency >= 80)
             {
@@ -70,6 +81,14 @@ public class TheShop : MonoBehaviour
                 doubleAmmo.enabled = true;
                 currency -= 300;
             }
+            if (Input.GetKeyDown(KeyCode.U) && currency >= 300 && UnlockHealthUp.healthUnlocked == true)
+            {
+                SoundManagerScript.PlaySound("SFX/ChaChing");
+                healthUpgrade = true;
+                healthUpSoldOut.enabled = true;
+                doubleHealth.enabled = true;
+                currency -= 300;
+            }
             if (Input.GetKeyDown(KeyCode.Alpha3) && currency >= 600 && MoveAndShootMouse.purchasedShotgun == false)
             {
                 SoundManagerScript.PlaySound("SFX/ChaChing");
@@ -92,8 +111,10 @@ public class TheShop : MonoBehaviour
             }
             if (HealthScript.health >= 100)
             {
+                HealthScript.health = 100;
                 healthSoldOut.enabled = true;
             }
+            
             else
             {
                 healthSoldOut.enabled = false;

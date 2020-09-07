@@ -38,6 +38,8 @@ public class GameOverReset : MonoBehaviour
             unlockKnifeUp.numOfKnifeKills = 0;
             UnlockAmmoUp.ammoUnlocked = false;
             UnlockAmmoUp.numOfAmmoBought = 0;
+            UnlockHealthUp.numOfHealthBought = 0;
+            UnlockHealthUp.healthUnlocked = false;
                 EnemyBehavior.moveSpeed = 2f;
                 WaveSystem.waveNum = 1;
                 Boss1Behavior.bossHealth = 200;
