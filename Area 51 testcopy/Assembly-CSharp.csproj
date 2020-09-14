@@ -113,10 +113,10 @@
     <Compile Include="Assets\Scripts\TimsBehavior.cs" />
     <Compile Include="Assets\Scripts\TimTomHealthDisplay.cs" />
     <Compile Include="Assets\Scripts\TomsBehavior.cs" />
+    <Compile Include="Assets\Scripts\UnlockAmmoUp.cs" />
+    <Compile Include="Assets\Scripts\UnlockHealthUp.cs" />
     <Compile Include="Assets\Scripts\unlockKnifeUp.cs" />
     <Compile Include="Assets\Scripts\WaveSystem.cs" />
-    <Compile Include="Assets\UnlockAmmoUp.cs" />
-    <Compile Include="Assets\UnlockHealthUp.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/colon/Desktop/Area 51 Post Graduation/Area 51 Master Copy/Area 51 testcopy/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
