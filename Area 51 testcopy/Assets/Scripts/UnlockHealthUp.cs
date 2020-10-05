@@ -19,9 +19,9 @@ public class UnlockHealthUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (numOfHealthBought < 10)
+        if (numOfHealthBought < 20)
         {
-            HealthBoughtNum.text = numOfHealthBought + "/10";
+            HealthBoughtNum.text = numOfHealthBought + "/20";
         }
         else
         {

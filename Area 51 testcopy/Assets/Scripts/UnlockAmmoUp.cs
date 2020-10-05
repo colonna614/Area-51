@@ -19,9 +19,9 @@ public class UnlockAmmoUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (numOfAmmoBought < 15)
+        if (numOfAmmoBought < 30)
         {
-            ammoBoughtNum.text = numOfAmmoBought + "/15";
+            ammoBoughtNum.text = numOfAmmoBought + "/30";
         }
         else
         {
