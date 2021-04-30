@@ -52,7 +52,7 @@ public class Move2D : MonoBehaviour
     private Rigidbody2D rb;
   private Animator anim;
 
-    public GameObject KnifeBox;
+    public GameObject KnifeBox;    //****
     int knifetimer = 0;
 
 
@@ -173,7 +173,7 @@ public class Move2D : MonoBehaviour
                 {
                     SoundManagerScript.PlaySound("SFX/Knife");
                     isKnifeSwing = true;
-                    KnifeBox.SetActive(true);
+                    KnifeBox.SetActive(true);     //*************
                     canKnifeTime = 0;
                     canKnife = false;
                 }

@@ -91,7 +91,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (other.gameObject.tag == "Knife")
         {
-            //Debug.Log("Knife hit something");
+            Debug.Log("Knife hit something");
             isDeadByKnife = true;
         }
     }
