@@ -54,11 +54,14 @@ public class EnemyRandomSpawn : MonoBehaviour
                 Move2D.OutOfShop = true;
                 Time.timeScale = 1;
                 inventoryMenu.canOpenInv = true;
-                if (WaveSystem.waveNum == 3)
+
+                if (WaveSystem.waveNum == 6 || WaveSystem.waveNum == 11 ||
+                   WaveSystem.waveNum == 16 || WaveSystem.waveNum == 21)
                 {
                     MainSongSwitch.mainSongCheck = true;
                 }
-                if (WaveSystem.waveNum == 2)
+
+                if (WaveSystem.waveNum == 5)
                 {
                     MainSongSwitch.boss1SongCheck = true;
                     theBoss1.SetActive(true);
@@ -68,6 +71,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                 }
                 else if (WaveSystem.waveNum == 10)
                 {
+                    MainSongSwitch.boss2SongCheck = true;
                     theBoss2.SetActive(true);
                     bossIndicator2.enabled = true;
                     CancelInvoke();
@@ -75,6 +79,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                 }
                 else if (WaveSystem.waveNum == 15)
                 {
+                    MainSongSwitch.boss3SongCheck = true;
                     mainCamera.orthographicSize = 4.2f;
                     theBoss3.SetActive(true);
                     bossIndicator3.enabled = true;
@@ -83,6 +88,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                 }
                 else if (WaveSystem.waveNum == 20)
                 {
+                    MainSongSwitch.boss4SongCheck = true;
                     mainCamera.orthographicSize = 4.2f;
                     theBoss4.SetActive(true);
                     bossIndicator4.enabled = true;

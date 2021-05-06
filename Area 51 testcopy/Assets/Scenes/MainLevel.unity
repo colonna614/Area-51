@@ -29329,6 +29329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainWaveTheme: {fileID: 8300000, guid: 6e41f02f9df5b204c904c6afe9c21bbf, type: 3}
   boss1Song: {fileID: 8300000, guid: 849062c1596971e4694ddcb1f45f9e6a, type: 3}
+  boss2Song: {fileID: 8300000, guid: d91a9baae565c204f89d8d1640daee87, type: 3}
+  boss3Song: {fileID: 8300000, guid: 11b6b8527409abf428808b097be2d599, type: 3}
+  boss4Song: {fileID: 8300000, guid: d45b8e5ba21097349a998c35612b15e7, type: 3}
   audioSource: {fileID: 1529725541}
 --- !u!1 &1548060949
 GameObject:
