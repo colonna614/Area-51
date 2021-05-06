@@ -5,10 +5,12 @@ ScriptsOnlyBuild:
     - Boss1Behavior
     - Boss2Behavior
     - Boss3Behavior
+    - Boss4Behavior
     - BulletPool
     - BulletScript
     - CameraFollowPlayer
     - CurrencyDisplay
+    - CurrentHealthPrice
     - EnemyBehavior
     - EnemyBullet
     - EnemyBulletHell
@@ -19,6 +21,8 @@ ScriptsOnlyBuild:
     - HealthScript
     - KifleyDisplay
     - MainMenu
+    - MainSongSwitch
+    - MarcusDisplay
     - MouseToAim
     - Move2D
     - MoveAndShootMouse
@@ -33,10 +37,16 @@ ScriptsOnlyBuild:
     - TimTomHealthDisplay
     - TimsBehavior
     - TomsBehavior
+    - UnlockAmmoUp
+    - UnlockHealthUp
     - WaveSystem
+    - bulletShopFix
     - highscore
+    - knifeBarUI
+    - marcusBullets
     - nice
     - pause
+    - unlockKnifeUp
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -102,71 +112,91 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9380}
     - Class: 114
-      Script: {instanceID: 9408}
+      Script: {instanceID: 9384}
     - Class: 114
-      Script: {instanceID: 9450}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 9462}
+      Script: {instanceID: 9452}
     - Class: 114
-      Script: {instanceID: 9470}
+      Script: {instanceID: 9464}
     - Class: 114
-      Script: {instanceID: 9508}
+      Script: {instanceID: 9472}
     - Class: 114
-      Script: {instanceID: 9644}
+      Script: {instanceID: 9510}
     - Class: 114
-      Script: {instanceID: 9676}
+      Script: {instanceID: 9646}
     - Class: 114
-      Script: {instanceID: 9828}
+      Script: {instanceID: 9678}
     - Class: 114
-      Script: {instanceID: 9942}
+      Script: {instanceID: 9774}
     - Class: 114
-      Script: {instanceID: 10026}
+      Script: {instanceID: 9832}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 9944}
     - Class: 114
-      Script: {instanceID: 10106}
+      Script: {instanceID: 9948}
     - Class: 114
-      Script: {instanceID: 10108}
+      Script: {instanceID: 10032}
     - Class: 114
-      Script: {instanceID: 10110}
+      Script: {instanceID: 10052}
     - Class: 114
-      Script: {instanceID: 10148}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10114}
     - Class: 114
-      Script: {instanceID: 10194}
+      Script: {instanceID: 10116}
     - Class: 114
-      Script: {instanceID: 10212}
+      Script: {instanceID: 10154}
     - Class: 114
-      Script: {instanceID: 10236}
+      Script: {instanceID: 10164}
     - Class: 114
-      Script: {instanceID: 10286}
+      Script: {instanceID: 10200}
     - Class: 114
-      Script: {instanceID: 10310}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10420}
+      Script: {instanceID: 10242}
+    - Class: 114
+      Script: {instanceID: 10292}
+    - Class: 114
+      Script: {instanceID: 10316}
+    - Class: 114
+      Script: {instanceID: 10348}
+    - Class: 114
+      Script: {instanceID: 10400}
+    - Class: 114
+      Script: {instanceID: 10430}
     - Class: 114
       Script: {instanceID: 10462}
     - Class: 114
-      Script: {instanceID: 10482}
+      Script: {instanceID: 10474}
     - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 10494}
     - Class: 114
-      Script: {instanceID: 10596}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 10626}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 10700}
+      Script: {instanceID: 10624}
+    - Class: 114
+      Script: {instanceID: 10640}
+    - Class: 114
+      Script: {instanceID: 10710}
+    - Class: 114
+      Script: {instanceID: 10716}
     - Class: 114
       Script: {instanceID: 10720}
     - Class: 114
-      Script: {instanceID: 10750}
+      Script: {instanceID: 10738}
     - Class: 114
-      Script: {instanceID: 10756}
+      Script: {instanceID: 10768}
     - Class: 114
-      Script: {instanceID: 10810}
+      Script: {instanceID: 10774}
     - Class: 114
-      Script: {instanceID: 10912}
+      Script: {instanceID: 10828}
+    - Class: 114
+      Script: {instanceID: 10930}
+    - Class: 114
+      Script: {instanceID: 57002}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -202,6 +232,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -215,20 +247,24 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9448}
-    - Class: 114
       Script: {instanceID: 9450}
     - Class: 114
-      Script: {instanceID: 9456}
+      Script: {instanceID: 9452}
     - Class: 114
-      Script: {instanceID: 9462}
+      Script: {instanceID: 9458}
     - Class: 114
-      Script: {instanceID: 9470}
+      Script: {instanceID: 9464}
     - Class: 114
-      Script: {instanceID: 9506}
+      Script: {instanceID: 9472}
     - Class: 114
-      Script: {instanceID: 10328}
+      Script: {instanceID: 9508}
+    - Class: 114
+      Script: {instanceID: 9510}
+    - Class: 114
+      Script: {instanceID: 10334}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -264,21 +300,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9448}
-    - Class: 114
       Script: {instanceID: 9450}
     - Class: 114
-      Script: {instanceID: 9456}
+      Script: {instanceID: 9452}
     - Class: 114
-      Script: {instanceID: 9462}
+      Script: {instanceID: 9458}
     - Class: 114
-      Script: {instanceID: 9470}
+      Script: {instanceID: 9464}
     - Class: 114
-      Script: {instanceID: 9506}
+      Script: {instanceID: 9472}
     - Class: 114
       Script: {instanceID: 9508}
     - Class: 114
-      Script: {instanceID: 10328}
+      Script: {instanceID: 9510}
+    - Class: 114
+      Script: {instanceID: 10334}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -332,7 +368,7 @@ ScriptsOnlyBuild:
     className: Scoring
   - hash:
       serializedVersion: 2
-      Hash: db3161a3f10e5010b2a2012721b118a0
+      Hash: 402866624f55820eab4ea525ff718414
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: pause
@@ -348,6 +384,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthScript
+  - hash:
+      serializedVersion: 2
+      Hash: 4bfe26e612c722f7d78bc93755738f0f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss4Behavior
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -776,7 +818,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: af922a9eccfb329ea13a0d1c7e64bbf6
+      Hash: 90221dea41bb81a1e2866068b0ff38a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyRandomSpawn
@@ -818,6 +860,12 @@ ScriptsOnlyBuild:
     className: PlayerSpriteController
   - hash:
       serializedVersion: 2
+      Hash: 889e4d80ad8dc565a69acd11984de07b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnlockHealthUp
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -836,7 +884,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 02491ba019c05f6522e08e024f03e1a0
+      Hash: f77b97644165fedadf81ccdfd45054e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Move2D
@@ -1062,6 +1110,12 @@ ScriptsOnlyBuild:
     assemblyName: Vuforia.UnityExtensions.dll
     namespaceName: Vuforia
     className: WireframeTrackableEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 40191e6a49dafa6e1f264f1e7c3fcc16
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnlockAmmoUp
   - hash:
       serializedVersion: 2
       Hash: 3af54c317397efa2dc296520854fa529
@@ -1298,7 +1352,7 @@ ScriptsOnlyBuild:
     className: TomsBehavior
   - hash:
       serializedVersion: 2
-      Hash: 801a96ae23aafdaea511113ea68d77ef
+      Hash: ee3b483a9f759f6e1047caa9671b6bdc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TimTomHealthDisplay
@@ -1340,7 +1394,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 65adde96db1b6766555d80f07c74ce26
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Obstacle
@@ -1382,6 +1436,12 @@ ScriptsOnlyBuild:
     className: MainMenu
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: knifeBarUI
+  - hash:
+      serializedVersion: 2
       Hash: 3f8d7b92a6be3c715e55d5cfa7cc8384
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1410,6 +1470,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KifleyChangeSpriteUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CurrentHealthPrice
   - hash:
       serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
@@ -1460,6 +1526,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 45f802c260c232386e3d93b7677bfae2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MarcusDisplay
+  - hash:
+      serializedVersion: 2
       Hash: d8f4bf2bc1a75f1882afcbbe788b3e30
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1508,10 +1580,22 @@ ScriptsOnlyBuild:
     className: highscore
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: marcusBullets
+  - hash:
+      serializedVersion: 2
       Hash: 33d6e5c42d1410dcfe7044c109cd9a0f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyBehavior
+  - hash:
+      serializedVersion: 2
+      Hash: e7a4bdbbf8e64bc5ed66eeb702e6e6fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: unlockKnifeUp
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1526,6 +1610,12 @@ ScriptsOnlyBuild:
     className: CurrencyDisplay
   - hash:
       serializedVersion: 2
+      Hash: c1ecd168e348ac7984779c68f5fc932e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainSongSwitch
+  - hash:
+      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1538,13 +1628,13 @@ ScriptsOnlyBuild:
     className: EnemyBullet
   - hash:
       serializedVersion: 2
-      Hash: 7a0b3a5eb3fa5ecd7d27f8cb342dfa26
+      Hash: bf92f23100e781c178f3f852e5e15c42
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveAndShootMouse
   - hash:
       serializedVersion: 2
-      Hash: f8ca5ddfcb155f5362a30440e319c57f
+      Hash: 5818455a720c1f6f51b698a866187440
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KifleyDisplay
@@ -1580,7 +1670,7 @@ ScriptsOnlyBuild:
     className: KnifeScript
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6dab5b13a1c1dbcd1eeff46c3a994c52
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExitGame
@@ -1796,7 +1886,7 @@ ScriptsOnlyBuild:
     className: WireframeTrackableEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 50132b473a446f5ab3bc596aa79a1ba4
+      Hash: a1a4b1b1d47eec692dd2b2d09d2fb079
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TheShop
@@ -2022,9 +2112,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: bulletShopFix
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Options.unity
   - Assets/Scenes/MainLevel.unity
-  playerPath: C:/Users/colon/Desktop/Area 51 Build 6-11-20/Area 51 Prototype.exe
+  playerPath: C:/Users/colon/Desktop/Area 51 v1.3.0-c Builds/Area 51 Prototype.exe

@@ -37,7 +37,7 @@ public class Boss1Behavior : MonoBehaviour
         {
             gameObject.SetActive(false);
             Scoring.score += 2500;
-            TheShop.currency += 250;
+            TheShop.currency += 400;
             boss1IsDead = true;
         }
 

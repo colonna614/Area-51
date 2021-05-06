@@ -78,8 +78,8 @@ public class Move2D : MonoBehaviour
 
         CheckInput();
         CheckInputUp();
-        CheckMovementDirection();
-        CheckMovementDirectionUp();
+        //CheckMovementDirection();
+        //CheckMovementDirectionUp();
         UpdateAnimations();
         ApplyMovement();
         ApplyMovementUp();

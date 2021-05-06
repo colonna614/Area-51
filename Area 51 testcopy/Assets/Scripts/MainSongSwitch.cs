@@ -29,7 +29,7 @@ public class MainSongSwitch : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("boss 1 song check = " + boss1SongCheck);
+        //Debug.Log("boss 1 song check = " + boss1SongCheck);
 
         if (boss1SongCheck == true)
         {

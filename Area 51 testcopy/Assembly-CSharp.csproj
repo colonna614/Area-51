@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\bulletShopFix.cs" />
      <Compile Include="Assets\Scripts\AmmoCount.cs" />
      <Compile Include="Assets\Scripts\Boss1Behavior.cs" />
      <Compile Include="Assets\Scripts\Boss2Behavior.cs" />

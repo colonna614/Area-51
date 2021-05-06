@@ -37,7 +37,7 @@ public class TheShop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(HealthScript.health);
+        //Debug.Log(HealthScript.health);
         if (ammoUpgrade)
         {
             ammoIncrease = 30;

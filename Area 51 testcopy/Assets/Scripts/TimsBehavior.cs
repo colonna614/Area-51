@@ -38,7 +38,7 @@ public class TimsBehavior : MonoBehaviour
         if (timsHealth <= 0)
         {
                 Scoring.score += 2000;
-                TheShop.currency += 200;
+                TheShop.currency += 300;
                 TimIsDead = true;
             gameObject.SetActive(false);
 
