@@ -16,7 +16,7 @@ public class TomsBehavior : MonoBehaviour
     private Vector2 movement;
     public static bool TomIsDead = false;
 
-    public static int tomsHealth = 150;
+    public static int tomsHealth = 300;
 
     public GameObject boss2Container;
     public GameObject Tom;

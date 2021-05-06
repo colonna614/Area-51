@@ -17,7 +17,7 @@ public class Boss1Behavior : MonoBehaviour
     private Vector2 movement;
     public static bool boss1IsDead =false;
 
-    public static int bossHealth = 200;
+    public static int bossHealth = 400;
 
 
     private void Start()

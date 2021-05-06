@@ -42,9 +42,9 @@ public class GameOverReset : MonoBehaviour
             UnlockHealthUp.healthUnlocked = false;
                 EnemyBehavior.moveSpeed = 2f;
                 WaveSystem.waveNum = 1;
-                Boss1Behavior.bossHealth = 200;
-                TimsBehavior.timsHealth = 150;
-                TomsBehavior.tomsHealth = 150;
+                Boss1Behavior.bossHealth = 400;
+                TimsBehavior.timsHealth = 300;
+                TomsBehavior.tomsHealth = 300;
                 Boss3Behavior.bossHealth = 300;
                 Boss4Behavior.bossHealth = 350;
         }

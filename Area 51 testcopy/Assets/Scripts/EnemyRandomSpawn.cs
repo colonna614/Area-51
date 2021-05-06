@@ -69,7 +69,7 @@ public class EnemyRandomSpawn : MonoBehaviour
                     CancelInvoke();
                     InvokeRepeating("SpawnAEnemy", 0f, .8f);
                 }
-                else if (WaveSystem.waveNum == 10)
+                else if (WaveSystem.waveNum == 2)
                 {
                     MainSongSwitch.boss2SongCheck = true;
                     theBoss2.SetActive(true);

@@ -55,7 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MainSongSwitch.cs" />
      <Compile Include="Assets\Scripts\AmmoCount.cs" />
      <Compile Include="Assets\Scripts\Boss1Behavior.cs" />
      <Compile Include="Assets\Scripts\Boss2Behavior.cs" />
@@ -86,6 +85,7 @@
      <Compile Include="Assets\Scripts\knifestabbingthing.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MainMenuController.cs" />
+     <Compile Include="Assets\Scripts\MainSongSwitch.cs" />
      <Compile Include="Assets\Scripts\marcusBullets.cs" />
      <Compile Include="Assets\Scripts\MarcusDisplay.cs" />
      <Compile Include="Assets\Scripts\MouseToAim.cs" />

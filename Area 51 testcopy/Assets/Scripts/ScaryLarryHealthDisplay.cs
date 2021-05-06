@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScaryLarryHealthDisplay : MonoBehaviour
 {
     Image healthBar;
-    float maxHealth = 200f;
+    float maxHealth = 400f;
     public Image larrySprite;
     public Image larryBarDeplete;
     public Image larryBarRemain;

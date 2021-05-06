@@ -16,7 +16,7 @@ public class TimsBehavior : MonoBehaviour
     private Vector2 movement;
     public static bool TimIsDead = false;
 
-    public static int timsHealth = 150;
+    public static int timsHealth = 300;
 
     public GameObject boss2Container;
     public GameObject Tim;
