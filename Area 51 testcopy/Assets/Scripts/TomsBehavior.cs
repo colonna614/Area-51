@@ -16,7 +16,7 @@ public class TomsBehavior : MonoBehaviour
     private Vector2 movement;
     public static bool TomIsDead = false;
 
-    public static int tomsHealth = 300;
+    public static int tomsHealth = 200;
 
     public GameObject boss2Container;
     public GameObject Tom;
@@ -38,7 +38,7 @@ public class TomsBehavior : MonoBehaviour
         if (tomsHealth <= 0)
         {
             Scoring.score += 2000;
-            TheShop.currency += 300;
+            TheShop.currency += 250;
             TomIsDead = true;
             gameObject.SetActive(false);
 

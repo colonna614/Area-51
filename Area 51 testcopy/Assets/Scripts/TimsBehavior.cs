@@ -16,7 +16,7 @@ public class TimsBehavior : MonoBehaviour
     private Vector2 movement;
     public static bool TimIsDead = false;
 
-    public static int timsHealth = 300;
+    public static int timsHealth = 200;
 
     public GameObject boss2Container;
     public GameObject Tim;
@@ -38,7 +38,7 @@ public class TimsBehavior : MonoBehaviour
         if (timsHealth <= 0)
         {
                 Scoring.score += 2000;
-                TheShop.currency += 300;
+                TheShop.currency += 250;
                 TimIsDead = true;
             gameObject.SetActive(false);
 

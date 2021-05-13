@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimTomHealthDisplay : MonoBehaviour
 {
     public Image TimhealthBar;
-    float maxHealth = 300;
+    float maxHealth = 200;
     public Image TimSprite;
     public Image TimBarDeplete;
     public Image TimBarRemain;

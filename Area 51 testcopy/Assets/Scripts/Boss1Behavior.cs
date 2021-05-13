@@ -17,7 +17,7 @@ public class Boss1Behavior : MonoBehaviour
     private Vector2 movement;
     public static bool boss1IsDead =false;
 
-    public static int bossHealth = 400;
+    public static int bossHealth = 300;
 
 
     private void Start()
@@ -37,7 +37,7 @@ public class Boss1Behavior : MonoBehaviour
         {
             gameObject.SetActive(false);
             Scoring.score += 2500;
-            TheShop.currency += 400;
+            TheShop.currency += 300;
             boss1IsDead = true;
         }
 
